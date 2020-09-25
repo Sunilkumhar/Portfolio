@@ -1,0 +1,340 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* width: 100px;
+  height: 100px; */
+  background-color: rgb(22, 21, 21);
+}
+
+.topnav {
+  /* position: relative; */
+  overflow: hidden;
+  background-color: black;
+  height: 60px;
+  position: sticky;
+  top: 0px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  text-decoration: none;
+  color: black;
+}
+.topnav-left {
+  padding-left: 20px;
+  font-family: "Lemonada", cursive;
+}
+
+.topnav-right {
+  float: right;
+}
+.fixed_btn {
+  margin-right: 17px;
+}
+
+.intro,
+.education,
+.projects,
+.experience,
+.skills,
+.links,
+.more {
+  width: 80%;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+.intro .heading1,
+.education .heading1,
+.projects .heading1,
+.experience .heading1,
+.skills .heading1,
+.links .heading1,
+.more .heading1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  /* display: flex; */
+}
+
+.heading1 h1 {
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-bottom: 2px solid white;
+  /* text-decoration: underline; */
+}
+
+.bullet i {
+  color: rgb(120, 134, 68);
+  text-align: center;
+}
+
+.intro {
+  color: white;
+}
+.intro .intro1 .left_intro {
+  margin-top: 30px;
+  margin-left: 5%;
+}
+.intro .intro1 .left_intro .spec {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+}
+.intro .intro1 .first_show {
+  position: absolute;
+  top: 50;
+  overflow: hidden;
+  animation: show1 3s linear;
+  opacity: 0;
+}
+@keyframes show1 {
+  from {
+    opacity: 0;
+    /* transform: translateX(-50px); */
+  }
+  50% {
+    opacity: 1;
+    /* transform: translateX(0px); */
+  }
+  to {
+    opacity: 0;
+    /* transform: translateX(50px); */
+  }
+}
+.intro .intro1 .second_show {
+  position: absolute;
+  top: 50;
+  overflow: hidden;
+  animation: show2 6s linear;
+  opacity: 1;
+}
+@keyframes show2 {
+  from {
+    opacity: 0;
+    /* transform: translateX(-50px); */
+  }
+  50% {
+    opacity: 0;
+    /* transform: translateX(0px); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateX(50px); */
+  }
+}
+.changing {
+  display: inline-block;
+}
+.changing span {
+  position: absolute;
+  top: 200px;
+  overflow: hidden;
+  animation: change 6s linear infinite;
+  /* animation-delay: 11s; */
+  opacity: 0;
+}
+@keyframes change {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+.changing span:nth-child(1) {
+  animation-delay: 3s;
+}
+.changing span:nth-child(2) {
+  animation-delay: 5s;
+}
+.changing span:nth-child(3) {
+  animation-delay: 7s;
+}
+
+.education #Education1,
+.experience .experience1 {
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+.education {
+  border-top: 2px white dashed;
+  margin-bottom: 20px;
+}
+.education #Education1 .coll_name {
+  font-size: 20px;
+  font-family: "Lemonada", cursive;
+}
+.education #Education1 .degree {
+  font-size: 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.projects {
+  border-top: 2px white dashed;
+  margin-bottom: 20px;
+}
+.projects .projects1 {
+  color: white;
+  margin-top: 20px;
+}
+.projects .projects1 .first h3 {
+  margin-left: 15px;
+}
+.projects .projects1 .first a {
+  text-decoration: none;
+}
+.projects .projects1 .first a:hover {
+  color: blue;
+}
+.projects .projects1 .first .fordate {
+  display: flex;
+}
+
+.experience {
+  border-top: 2px white dashed;
+  margin-bottom: 20px;
+}
+.skills {
+  border-top: 2px white dashed;
+  margin-bottom: 20px;
+}
+.skills_me {
+  color: white;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.skills_me .back h3,
+.skills_me .front h3,
+.skills_me .programming h3 {
+  float: left;
+  padding-right: 5px;
+}
+.skills_me ul {
+  overflow: hidden;
+}
+.skills_me li {
+  display: inline-block;
+  margin-left: 40px;
+}
+.links {
+  margin-bottom: 25px;
+  border-top: 2px white dashed;
+}
+.links .links1 {
+  color: white;
+  margin-top: 20px;
+  display: flex;
+}
+
+.iconify {
+  color: white;
+  font-size: 50px;
+}
+.links .links1 .icon {
+  display: flex;
+  margin: auto;
+}
+.links .links1 a {
+  position: relative;
+  text-decoration: none;
+  color: #ddd;
+}
+.links .links1 a:hover {
+  color: rgb(76, 76, 233);
+}
+.links .links1 .x a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(241, 233, 233);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.25s ease-in-out 0s;
+}
+.links .links1 .x a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.links .links1 .icon .x {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 13px;
+}
+.more {
+  margin-bottom: 20px;
+  border-top: 2px white dashed;
+}
+.more .more1 {
+  color: white;
+  margin-top: 20px;
+}
+.more .more1 .buttons {
+  justify-content: center;
+  align-items: center;
+  margin-top: 2323px;
+}
+.more .buttons .btn-1 {
+  color: white;
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  border: 1px white solid;
+}
+.more .buttons .btn-2 {
+  color: white;
+
+  padding: 15px 40px;
+  border: 1px white solid;
+  justify-content: center;
+  align-items: center;
+}
+.more .buttons .btn-2:hover {
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 50px;
+  overflow: hidden;
+}
+.more .buttons .btn-1:hover {
+  color: black;
+}
+.more .buttons a {
+  text-decoration: none;
+}
+.more .buttons a:hover {
+  background-color: white;
+  text-decoration: none;
+}
+.more .more1 h3 {
+  text-align: center;
+}
